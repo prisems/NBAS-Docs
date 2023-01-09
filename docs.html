@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+code {
+font-family: Consolas, "courier new";
+color: crimson;
+background-color:#f1f1f1;
+padding: 2px;
+font-size: 105%;
+}
+</style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Change the description wrt project -->
+    <meta
+      name="NBAS - Notepad Basic"
+      content="A programming language similar to SHELL or BASH with the looks of Basic. Made in REplit and available via GitHub."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- You can add your own fonts from fonts.google.com -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default Script tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./public/js/index.js"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <!-- Replace the title name -->
+    <title>NBAS Docs</title>
+  </head>
+  <body
+    style="font-family: 'Poppins', sans-serif"
+    class="dark:bg-slate-900 bg-white dark:text-white"
+  >
+    <!-- Header start here -->
+    <header class="w-full p-3 border-b dark:border-b flex">
+      <nav
+        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
+      >
+        <ul>
+          <!-- You can change your logo name -->
+          <li class="font-mono text-xl">NBAS</li>
+        </ul>
+        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+          <li
+            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <div>
+            <ul class="flex">
+              <!-- Change the href link to your respective social media accounts-->
+              <li class="mr-5 flex dark:hidden">
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Header ends here -->
+
+    <div class="flex flex-col md:flex-row lg:flex-row">
+      <!-- Side menu starts here -->
+      <nav
+        class="flex ml-10 mt-7 md:fixed lg:fixed"
+        data-spy="affix"
+        data-offset-top="300"
+        data-offset-bottom="200"
+        role="navigation"
+      >
+        <ul class="nav">
+          <li class="font-medium"><a href="#link1">Notepad Basic</a></li>
+          <li class="font-medium">
+            <a href="#link2">Installation</a>
+            <ul class="nav">
+              <li
+                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
+              >
+                <a href="#link2_1">Windows / Mac / Linux</a>
+              </li>
+            </ul>
+          </li>
+          <li class="font-medium">
+            <a href="#link4">Documentation</a>
+            <ul class="nav">
+              <li
+                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
+              >
+                <a href="#link4_1">Tags</a>
+              </li>
+              <li
+                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
+              >
+                <a href="#link4_2">Console Reporters</a>
+              </li>
+              <li
+                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
+              >
+                <a href="#link4_3">Other</a>
+              </li>
+              <li
+                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
+              >
+                <a href="#link4_4">Packages</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Side Menu ends here -->
+
+      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+        <!-- Link1 start -->
+        <section id="link1">
+          <div class="h-full mt-10">
+            <p class="font-normal text-2xl">Notepad Basic</p>
+            <p class="leading-0 w-3/4">
+              Notepad Basic (NBAS) is a console based programming language based off of Shell and BASH. The appearance and usage is very basic, hence the name. 
+            </p>
+          </div>
+        </section>
+        <!-- Link1 end -->
+
+        <!-- Link2 Start -->
+        <section id="link2">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Installation</p>
+          </div>
+          <section id="link2_1" class="border-l-[2px]">
+            <div class="h-full mt-3 ml-5">
+              <p class="font-normal text-xl">Windows / Mac / Linux</p>
+              <p class="text-sm pb-4">Fork and clone the github repository.</p><div class="edit"><p>
+<code>git clone
+https://github.com/EarthRulerr/NBAS</code></p></div>
+</svg>
+            </div>
+          </section>
+        </section>
+        <!-- Link2 Ends -->
+
+        <!-- Link3 start -->
+        <!-- Link3 end -->
+
+        <!-- Link4 start -->
+        <section id="link4">
+          <div class="h-full mt-5">
+            <p class="font-normal text-2xl">Documentation</p>
+            <p class="text-sm pt-2 pb-4">Notepad Basic</p>
+          </div>
+
+          <!-- Font Family start -->
+          <section id="link4_1" class="border-l-[2px]">
+            <div class="h-full mt-3 ml-5">
+              <p class="font-normal text-xl">Tags</p>
+              <section id="link4_2">
+              <p class="text-sm pt-2 pb-4">
+                <code>PRNT string ;</code> - Printing strings to console. <br>
+                <code>CMT string</code> - Comments.<br>
+                <code>GET INPUT</code> - Next string is recorded as <code>INPUTVAL</code>.<br>
+                <code>MGET INPUT</code> - Multiline version of <code>GET INPUT</code>.<br>
+                <code>INPUTVAL</code> - Prints <code>INPUTVAL</code>.<br>
+                <code>ADD # , #</code> - Addition.<br>
+                <code>SUB # , #</code> - Subtraction.<br>
+                <code>MUL # , #</code> - Multiplication.<br>
+                <code>DIV # , #</code> - Division.<br>
+                <code>POW # , #</code> - Raised to the power.<br>
+                <code>WAIT #</code> - Wait # seconds.<br></p>
+              </section>
+               <p class="font-normal text-xl">Console Reporters</p> 
+              <section id="link4_3">
+              <p class="text-sm pt-2 pb-4">
+              <code>$CPU</code> - Reports CPU name.<br>
+                <code>$CPUS</code> - Reports number of CPUs.<br>
+                <code>$CPUM</code> - Reports CPU memory.<br>
+                <code>$CPU_ARCH</code> - Reports CPU architecture.<br>
+                <code>$CPU_SPD</code> - Reports CPU speed.<br>
+                <code>$CPU_FREQ</code> - Reports CPU frequency.<br>
+                <code>$OS</code> - Reports the operating system.<br>
+                <code>$TIME</code> - Reports server time.<br>
+                <code>$IP</code> - Reports IP address. <br>
+                <code>$USER</code> - Reports host name.<br>
+                <code>$LOC</code> - Reports location.<br>
+                <code>$LINE</code> - Reports line.<br>
+                <code>$SYST</code> - Reports system data.<br>
+              </p>
+              </section>
+              <p class="font-normal text-xl">Other</p> 
+              <section id="link4_4">
+              <p class="text-sm pt-2 pb-4">
+                <code>%20</code> - Prints a space.<br>
+                <code>CLR</code> - Clears console.<br>
+                <code>PKGHELP</code> - Help for packages.<br>
+                <code>HELP</code> - Tag guide.
+                <code>GUIDES</code> - Opens all guides and help.<br>
+              </p>
+              </section>
+                <p class="font-normal text-xl">Packages</p> 
+              <section id="link4_5">
+              <p class="text-sm pt-2 pb-4">
+                <code>(pkg.reset)</code> - Resets settings to default.<br>
+                <code>(pkg.custom)</code> - Installs Custom package, allows for console customization.<br>
+                <code>PKGHELP</code> and <code>GUIDES</code> for help on packages.<br>
+              </p>
+              </section>
+            </div>
+          </section>
+
+          <!-- Buttons start -->
+          
+        <!-- Link4 end -->
+
+        <!-- Link5 starts -->
+          <!-- Reference Start -->
+        <!-- Link6 ends -->
+      </div>
+    </div>
+    <!-- Footer starts here -->
+    <footer>
+      <div class="dark:bg-white bg-slate-900 h-38 py-1 px-1 mt-5">
+        <div
+          tabindex="0"
+          aria-label="footer"
+          class="focus:outline-none mx-auto container flex flex-col items-center justify-center"
+        >
+          <div class="text-black flex flex-col md:items-center f-f-l pt-0">
+            <div class="my-6 text-base text-color f-f-l">
+              <ul class="md:flex items-center">
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./index.html"
+                    class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200"
+                    >Home
+                  </a>
+                </li>
+                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  <a
+                    href="./docs.html"
+                    class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200"
+                    >Documentation
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-sm text-color mb-10 f-f-l">
+              <!-- Rename cleandocs with your respective name -->
+              <p tabindex="0" class="text-white dark:text-black focus:outline-none">
+                &copy; 2022 NBAS. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends here -->
+  </body>
+</html>
