@@ -1,0 +1,5 @@
+.note blockquote {
+  color: #111;
+  background-color: whitesmoke;
+  border-left: 4px solid rgb(231, 175, 95);
+}
